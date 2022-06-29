@@ -1,10 +1,11 @@
-#include<stdio.h>
-#define PI 3.14
+#include <stdio.h>
 int main()
-{
-    int r;
-    float a;
-    scanf("%d",&r);
-    a=PI*r*r;
-    printf("%0.2f",a);
+ {
+   float pie = 3.14;
+   int r;
+   scanf("%d",&r);
+   float area;
+   area = pie*r*r;
+   printf("%.2f", area);
+   return 0;
 }
