@@ -1,9 +1,8 @@
 #include<stdio.h>
 int main()
 {
-    int P,T,R,S;
-    scanf("%d%d%d",&P,&T,&R);
-    S=(P*T*R)/100;
-    printf("%d",S);
-    return 0;
+   int P,T,R,SI;
+   scanf("%d%d%d",&P,&T,&R);
+   SI=(P*T*R)/100;
+   printf("%d",SI);
 }
