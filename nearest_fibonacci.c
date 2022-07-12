@@ -1,23 +1,31 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int i,n,k,x,y,a=0,b=1,c;
+    int n,a=0,b=1,c,min,max;
     scanf("%d",&n);
-    while(a<=n)
+    for(int i=1;;i++)
     {
-        i=a;
         c=a+b;
         a=b;
         b=c;
-        k=a;
+        if(c<n)
+        min=c;
+        else
+        {
+            max=c;
+            break;
+        }
     }
-    x=abs(k-n);
-    y=abs(i-n);
-    if(x>y)
-    printf("%d",i);
-    else if(x==y)
-    printf("%d %d",i,k);
+    int r1=n-min;
+    int r2=max-n;
+    if(r1>r2)
+    {
+        printf("%d",max);
+    }
+    else if(r1==r2)
+    {
+        printf("%d %d",min,max);
+    }
     else
-    printf("%d",k);
+    printf("%d",min);
 }
