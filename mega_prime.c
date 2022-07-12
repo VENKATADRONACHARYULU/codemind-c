@@ -1,34 +1,43 @@
 #include<stdio.h>
 int main()
 {
-    int i,n,c=0,d,f=0;
+    int i,j,n,m,fact=0,dig=0,pr=0;
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
         if(n%i==0)
         {
-            c++;
+            fact++;
         }
     }
-    if(c==2)
+    if(fact==2)
     {
-        while(n!=0)
+        while(n>0)
         {
-            f=0;
-            d=n%10;
-            if(d==2 || d==3 || d==5 || d==7)
+            fact=0;
+            m=n%10;
+            for(j=1;j<=m;j++)
             {
-                f=1;
+                if(m%j==0)
+                {
+                    fact++;
+                }
             }
-            n=n/10;
+            if(fact==2)
+            {
+                pr++;
+            }
+            dig++;
+            n/=10;
         }
-    }
-    if(c==2 && f==1)
-    {
-        printf("Mega Prime");
-    }
-    else
-    {
+        if(dig==pr)
+        {
+            printf("Mega Prime");
+        }else{
+            printf("Not Mega Prime");
+        }
+    }else{
         printf("Not Mega Prime");
     }
+    return 0;
 }
